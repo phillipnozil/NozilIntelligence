@@ -58,7 +58,7 @@
                     <p>We create custom, user-friendly websites optimized for performance to help businesses enhance their online presence and drive growth.
                     </p>
                     <div class="btn-group">
-                        <a href="mailto:nitechnologiesllc@gmail.com" class="btn">Starting from $1,500 > </a>
+                        <a href="mailto:nitechnologiesllc@gmail.com?subject=Web%20Development" class="btn">Starting from $1,500 > </a>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                     <p>Our team develops tailored software solutions, including mobile apps and enterprise systems, to streamline business processes and improve efficiency.
                     </p>
                     <div class="btn-group">
-                        <a href="mailto:nitechnologiesllc@gmail.com" class="btn">Starting from $5,000 > </a>
+                        <a href="mailto:nitechnologiesllc@gmail.com?subject=Software%20Development" class="btn">Starting from $5,000 > </a>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                     <p>We provide advanced AVL systems for churches, events, and businesses, delivering high-quality audio, visual, and lighting solutions to enhance every experience.
                     </p>
                     <div class="btn-group">
-                        <a href="mailto:nitechnologiesllc@gmail.com" class="btn">Starting from $2,500 > </a>
+                        <a href="mailto:nitechnologiesllc@gmail.com?subject=AVL%20Solution" class="btn">Starting from $2,500 > </a>
                     </div>
                 </div>
             </div>
@@ -91,7 +91,7 @@
                     <p>We offer professional live stream production services, handling everything from multi-camera setups to seamless broadcast integration for events and services.
                     </p>
                     <div class="btn-group">
-                        <a href="mailto:nitechnologiesllc@gmail.com" class="btn">Starting from $1,000 > </a>
+                        <a href="mailto:nitechnologiesllc@gmail.com?subject=livestream%20Production" class="btn">Starting from $1,000 > </a>
                     </div>
                 </div>
             </div>    
@@ -102,7 +102,7 @@
                     <p>We provide high-quality audio production services for podcasts, music tracks, and live events, ensuring crystal-clear sound for every project.
                     </p>
                     <div class="btn-group">
-                        <a href="mailto:nitechnologiesllc@gmail.com" class="btn">Starting from $150 > </a>
+                        <a href="mailto:nitechnologiesllc@gmail.com?subject=Audio%20Production" class="btn">Starting from $150 > </a>
                     </div>
                 </div>
             </div>
@@ -113,7 +113,7 @@
                     <p>We design and install secure, high-speed network systems to ensure reliable connectivity and support scalable solutions for businesses and events.
                     +</p>
                     <div class="btn-group">
-                        <a href="mailto:nitechnologiesllc@gmail.com" class="btn">Starting from $2,500 > </a>
+                        <a href="mailto:nitechnologiesllc@gmail.com?subject=Network%20Installation" class="btn">Starting from $2,500 > </a>
                     </div>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                         <i class='bx bxs-star' id="star"></i>
                         <i class='bx bxs-star' id="star"></i>
                     </div>
-                    <p></p>
+                    <p>"Our livestreams are now professional and engaging, reaching beyond our walls. Amazing work by Nozil Intelligence Technologies!"</p>
                 </div>
 
                 <div class="testimonial-item">
@@ -148,7 +148,7 @@
                         <i class='bx bxs-star' id="star"></i>
                         <i class='bx bxs-star' id="star"></i>
                     </div>
-                    <p></p>
+                    <p>"Nozil provided top-notch AVL systems and a seamless livestream setup. Our services have never been more impactful!"</p>
                 </div>
 
                 <div class="testimonial-item">
@@ -161,7 +161,7 @@
                         <i class='bx bxs-star' id="star"></i>
                         <i class='bx bxs-star' id="star"></i>
                     </div>
-                    <p></p>
+                    <p>"The sound quality is outstanding! Nozil brought clarity and balance to our worship experience. Highly recommend!"</p>
                 </div>
             </div>
         </div>
@@ -268,6 +268,26 @@
             <div class="input-group-2">
                 <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <input type="submit" value="Send Message" class="btn">
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+                <script>
+  
+    emailjs.init("1KtD0PSx4J6n14q4g"); 
+
+   
+    document.getElementById('contact-form').onsubmit = function (e) {
+        e.preventDefault(); 
+        
+       
+        emailjs.sendForm("service_lng0szh", "template_a46hk4b", this)
+            .then(function () {
+                alert("Message sent successfully!");
+            }, function (error) {
+                alert("Failed to send message. Please try again.");
+                console.error(error);
+            });
+    };
+</script>
+
             </div>
         </form>
         
