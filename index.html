@@ -251,47 +251,55 @@
         </div>
     </section>
 
-    <section class="contact" id="contact">
+   <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
     
-        <form action="#" method="POST">
+        <form id="contact-form" method="POST">
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="input-box">
-                    <input type="text" name="subject" placeholder="Subject" required>
-                    <input type="number" name="phone" placeholder="Phone Number">
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    <input type="number" id="phone" name="phone" placeholder="Phone Number">
                 </div>
             </div>
             <div class="input-group-2">
-                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <input type="submit" value="Send Message" class="btn">
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-                <script>
-  
-    emailjs.init("1KtD0PSx4J6n14q4g"); 
-
-   
-    document.getElementById('contact-form').onsubmit = function (e) {
-        e.preventDefault(); 
-        
-       
-        emailjs.sendForm("service_lng0szh", "template_a46hk4b", this)
-            .then(function () {
-                alert("Message sent successfully!");
-            }, function (error) {
-                alert("Failed to send message. Please try again.");
-                console.error(error);
-            });
-    };
-</script>
-
             </div>
         </form>
-        
+    
     </section>
+    
+    <script>
+        document.getElementById('contact-form').onsubmit = function(e) {
+            e.preventDefault(); 
+    
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var subject = document.getElementById('subject').value.trim();
+            var phone = document.getElementById('phone').value.trim();
+            var message = document.getElementById('message').value.trim();
+            
+            var body = `
+            <strong>Name:</strong> ${name} <br>
+            <strong>Email:</strong> ${email} <br>
+            <strong>Phone:</strong> ${phone || 'Not Provided'} <br><br>
+            <strong>Message:</strong><br> 
+            ${message} `;
+            
+            var encodedSubject = encodeURIComponent(subject);
+            var encodedMessage = "Name: " + name + "\nEmail: " + email + (phone ? "\nPhone: " + phone : "") + "\nMessage: " + message;
+    
+            encodedMessage = encodeURIComponent(encodedMessage);
+    
+            var mailtoLink = "mailto:nitechnologiesllc@gmail.com?subject=" + encodedSubject + "&body=" + encodedMessage;
+    
+            window.location.href = mailtoLink;
+        };
+    </script>
     
     <footer class="footer">
         <div class="social">
