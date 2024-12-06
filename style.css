@@ -707,6 +707,17 @@ section.fade-out {
     box-shadow: 0 0 15px var(--main-color); /* Subtle shadow for mobile */
   }
 }  
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
 
 
 
