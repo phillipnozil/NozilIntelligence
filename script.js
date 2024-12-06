@@ -32,11 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("fade-in");
-            observer.unobserve(entry.target); // Prevent re-triggering
+            observer.unobserve(entry.target); 
           }
         });
       },
-      { threshold: 0.1 } // Adjust threshold for when to trigger fade-in
+      { threshold: 0.1 } 
     );
   
     elements.forEach((element) => {
@@ -65,7 +65,7 @@ const handleFadeEffect = (entries, observer) => {
     };
   
     const observer = new IntersectionObserver(handleFadeEffect, {
-      threshold: 0.5, // Trigger when 50% of the section is visible
+      threshold: 0.5, 
     });
   
     sections.forEach((section) => observer.observe(section));
