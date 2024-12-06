@@ -49,24 +49,25 @@ document.addEventListener("DOMContentLoaded", () => {
   
     let activeSection = null;
   
-const handleFadeEffect = (entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      
-      entry.target.classList.remove("fade-out");
-      entry.target.classList.add("fade-in");
-    } else {
-   
-      entry.target.classList.remove("fade-in");
-      entry.target.classList.add("fade-out");
-    }
+const handleFadeEffect = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (activeSection) {
+            activeSection.classList.remove("fade-in");
+            activeSection.classList.add("fade-out");
+          }
+  
+          entry.target.classList.remove("fade-out");
+          entry.target.classList.add("fade-in");
+          activeSection = entry.target;
+        }
+      });
+    };
+  
+    const observer = new IntersectionObserver(handleFadeEffect, {
+      threshold: 0.5, // Trigger when 50% of the section is visible
+    });
+  
+    sections.forEach((section) => observer.observe(section));
   });
-};
-
-const observer = new IntersectionObserver(handleFadeEffect, {
-  threshold: 0.4,
-});
-
-sections.forEach((section) => observer.observe(section));
-
   
