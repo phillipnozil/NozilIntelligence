@@ -151,7 +151,7 @@ span {
   background: var(--main-color);
   box-shadow: 0 0 25px var(--main-color);
   border-radius: 1rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: black;
   border: 2px solid transparent;
   letter-spacing: 0.1rem;
@@ -386,14 +386,14 @@ span {
   padding: 5rem 5rem;
 }
 .service-info h4 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 5;
   margin: 0 auto;  
   text-align: center; 
 }
 .service-info p {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 600;
   max-height: 100px;
   line-height: 1.7;
