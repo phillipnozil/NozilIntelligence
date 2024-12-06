@@ -386,17 +386,17 @@ span {
   padding: 5rem 5rem;
 }
 .service-info h4 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   line-height: 5;
   margin: 0 auto;  
   text-align: center; 
 }
 .service-info p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   max-height: 100px;
-  line-height: 1.7;
+  line-height: 1.5;
   margin: auto;
 }
 .service-info .service-button {
