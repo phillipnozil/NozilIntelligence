@@ -182,7 +182,7 @@ span {
 .text-animation {
   font-size: 30px;
   font-weight: 600;
-  min-width: 900px;
+  min-width: 1000px;
 }
 .text-animation span {
   position: relative;
