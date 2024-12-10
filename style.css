@@ -214,20 +214,13 @@ span {
   }
   21%,
   40% {
-    content: "Software development";
+    content:"AVL solutions" ;
   }
   41%,
   60% {
-    content: "AVL solutions";
+    content:"Live production" ;
   }
-  61%,
-  80% {
-    content: "Live production";
-  }
-  81%,
-  100% {
-    content: "Network solutions";
-  }
+
 }
 @keyframes typing {
   10%,
